@@ -1,0 +1,26 @@
+.page-header
+  = link_to places_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back
+  h1
+    | Details
+dl.dl-horizontal
+  dt = @place.name
+  dd = @place.address
+  dt Created By:
+  dd
+    => gravatar_image_tag(@place.user.email, :alt => 'Michael Deering', :gravatar => { :size => 15 })
+    = @place.user.email
+  dt Comments
+  dd = link_to 'Show All', place_place_comments_path(@place)
+
+
+div
+  - if @place.user_id == current_user.id
+    => link_to edit_place_path(@place), class: 'btn btn-primary' do 
+      span.glyphicon.glyphicon-pencil
+      |  Edit 
+    = link_to @place, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' do 
+      span.glyphicon.glyphicon-remove
+      |  Delete 
+  

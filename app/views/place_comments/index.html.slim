@@ -1,0 +1,16 @@
+.page-header
+  = link_to new_place_place_comment_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  Post New
+  h1
+    | Comments
+
+- @place_comments.each do |place_comment|
+  .panel.panel-default
+    .panel-body
+      => gravatar_image_tag(place_comment.user.email)
+      = place_comment.content
+      - if place_comment.user_id == current_user.id
+        hr
+        => link_to 'Edit', edit_place_place_comment_path(@place, place_comment)
+        = link_to 'Destroy', [@place, place_comment], method: :delete, data: { confirm: 'Are you sure?' } 

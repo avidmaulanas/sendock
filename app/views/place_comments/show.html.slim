@@ -1,0 +1,22 @@
+.page-header
+  = link_to place_place_comments_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_place_place_comment_path(@place, @place_comment), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show place_comment
+dl.dl-horizontal
+  dt
+    | Place:
+  dd
+    = @place_comment.place_id
+  dt
+    | User:
+  dd
+    = @place_comment.user_id
+  dt
+    | Content:
+  dd
+    = @place_comment.content

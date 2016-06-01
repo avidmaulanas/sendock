@@ -1,0 +1,12 @@
+.page-header
+  = link_to place_place_comments_path, class: 'btn btn-default' do
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to [@place, @place_comment], class: 'btn btn-primary' do
+    span.glyphicon.glyphicon-info-sign
+    |  Show 
+  h1
+    | Editing 
+    | place_comment
+
+= render 'form'

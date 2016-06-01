@@ -1,0 +1,18 @@
+.page-header
+  = link_to place_images_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_place_image_path(@place_image), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show place_image
+dl.dl-horizontal
+  dt
+    | Name:
+  dd
+    = @place_image.name
+  dt
+    | Place:
+  dd
+    = @place_image.place_id

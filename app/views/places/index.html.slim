@@ -1,0 +1,11 @@
+.page-header
+  = link_to new_place_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Place
+  h1
+    | Places
+
+- @places.each do |place|
+  .panel.panel-default
+    .panel-body
+      = link_to place.name, place
