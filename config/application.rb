@@ -22,10 +22,5 @@ module Sendock
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
-    config.serviceworker.routes.draw do
-      # maps to asset named 'serviceworker.js' implicitly
-      match "/serviceworker.js"
-    end
   end
 end
