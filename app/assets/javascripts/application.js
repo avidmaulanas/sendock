@@ -34,7 +34,7 @@ $(function(){
 })
 
 // if (window.location.hostname == "127.0.0.1"){
-if (window.location.hostname == "sendock.agung.work"){
+if (window.location.hostname == "sendock.herokuapp.com"){
   if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
       .then(function(reg) {
