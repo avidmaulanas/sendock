@@ -9,7 +9,7 @@ dl.dl-horizontal
   dd = @place.address
   dt Created By:
   dd
-    => gravatar_image_tag(@place.user.email, :alt => 'Michael Deering', :gravatar => { :size => 15 })
+    => gravatar_image_tag(@place.user.email, :alt => 'Michael Deering', :gravatar => { :size => 15, secure: true })
     = @place.user.email
   dt Comments
   dd = link_to 'Show All', place_place_comments_path(@place)

@@ -8,7 +8,7 @@
 - @place_comments.each do |place_comment|
   .panel.panel-default
     .panel-body
-      => gravatar_image_tag(place_comment.user.email)
+      => gravatar_image_tag(place_comment.user.email, :gravatar => { secure: true })
       = place_comment.content
       - if place_comment.user_id == current_user.id
         hr
