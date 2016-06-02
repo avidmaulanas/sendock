@@ -25,7 +25,7 @@ module Sendock
 
     config.serviceworker.routes.draw do
       # maps to asset named 'serviceworker.js' implicitly
-      match "/serviceworker.js"
+      match "/serviceworker.js" => "serviceworker.js"
     end
   end
 end
