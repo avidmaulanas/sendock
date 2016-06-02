@@ -33,6 +33,7 @@ $(function(){
   });
 })
 
+// if (window.location.hostname == "127.0.0.1"){
 if (window.location.hostname == "sendock.agung.work"){
   if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
