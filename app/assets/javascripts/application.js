@@ -33,12 +33,11 @@ $(function(){
   });
 })
 
-if (window.location.hostname == "127.0.0.1"){
-// if (window.location.hostname == "sendock.herokuapp.com"){
+// if (window.location.hostname == "127.0.0.1"){
   if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
       .then(function(reg) {
         console.log(reg.scope, 'register');
       });
   }
-}
+// }
