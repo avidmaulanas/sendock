@@ -1,6 +1,3 @@
-this.addEventListener('install', function(event) {
-});
-
 self.addEventListener('fetch', function onFetch(event) {
   // console.log(event)
   if(event.request.url.indexOf("://gravatar.com") > -1) {

@@ -35,11 +35,9 @@ $(function(){
 
 if (window.location.hostname == "sendock.agung.work"){
   if (navigator.serviceWorker) {
-    console.log('Registering serviceworker');
-    navigator.serviceWorker.register('/serviceworker.js', { scope: '/' })
+    navigator.serviceWorker.register('/sw.js')
       .then(function(reg) {
         console.log(reg.scope, 'register');
-        console.log('Service worker change, registered the service worker');
       });
   }
 }
